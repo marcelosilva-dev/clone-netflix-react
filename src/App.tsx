@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { Container } from "./styles";
+
+import Header from "./components/header";
+import RowSwiper from "./components/main/index.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="RowSwiper" style={{ paddingLeft: "3rem" }}>
+        <RowSwiper text="Populares na Netflix" deviceType="desktop" />
+        <RowSwiper text="Em alta" deviceType="desktop" />
+        <RowSwiper
+          text="Continuar assistindo como Marcelo"
+          deviceType="desktop"
+        />
+        <RowSwiper text="Assistir novamente" deviceType="desktop" />
+        <RowSwiper text="Originais Netflix" deviceType="desktop" />
+        <RowSwiper text="Produções de Holywood" deviceType="desktop" />
+      </div>
+    </Container>
   );
 }
 
